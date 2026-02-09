@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Warning: Suspicious Link</title>
+  <link rel="stylesheet" href="warning.css">
+</head>
+<body>
+  <div class="card">
+    <h1>⚠️ Suspicious Link Detected</h1>
+    <div id="pill" class="pill"></div>
+
+    <p><b>Final destination:</b></p>
+    <p class="mono" id="finalUrl"></p>
+
+    <details open>
+      <summary>Redirect chain</summary>
+      <ul id="chain"></ul>
+    </details>
+
+    <div class="buttons">
+      <button id="proceedBtn" class="danger">Proceed</button>
+      <button id="backBtn">Go back</button>
+    </div>
+
+    <p class="small">
+      This is a warning only. The link is also saved to your Suspicious List.
+    </p>
+  </div>
+
+  <script src="warning.js"></script>
+</body>
+</html>

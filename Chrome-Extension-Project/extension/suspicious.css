@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f6f7fb;
+    margin: 0;
+    padding: 24px;
+}
+
+.wrap {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+h1 {
+    margin: 0 0 12px;
+}
+
+.row {
+    margin-bottom: 12px;
+}
+
+button {
+    padding: 10px 12px;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.card {
+    background: white;
+    border-radius: 14px;
+    padding: 12px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, .06);
+}
+
+.mono {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    word-break: break-all;
+    font-size: 12px;
+}
+
+.pill {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+}
+
+.pill.low {
+    background: #e7f7ed;
+}
+
+.pill.medium {
+    background: #fff4d6;
+}
+
+.pill.high {
+    background: #ffe1e1;
+}
+
+.small {
+    font-size: 12px;
+    color: #444;
+}
+
+a {
+    color: #0b57d0;
+}

@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>URL Risk Checker</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="header">
+    <h2 class="title">URL Risk Checker</h2>
+
+    <div class="toggle-container">
+      <label class="switch">
+        <input type="checkbox" id="toggleExtension">
+        <span class="slider"></span>
+      </label>
+      <span id="statusLabel" class="status-text">ON</span>
+    </div>
+  </div>
+
+  <label for="urlInput">Paste suspicious URL:</label>
+  <input id="urlInput" type="text" placeholder="https://example.com/..." />
+  <div class="row">
+    <button id="analyzeBtn">Check</button>
+    <button id="openSuspiciousBtn">Suspicious List</button>
+  </div>
+
+  <div id="status"></div>
+  <div id="result" class="hidden">
+    <div class="pill" id="riskPill"></div>
+    <div class="small"><b>Final URL:</b> <span id="finalUrl"></span></div>
+
+    <details>
+      <summary>Redirect chain</summary>
+      <ul id="chainList"></ul>
+    </details>
+
+    <div class="row">
+      <button id="addSuspiciousBtn">Add to Suspicious</button>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

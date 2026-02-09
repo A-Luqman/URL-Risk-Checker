@@ -1,0 +1,34 @@
+{
+    "manifest_version": 3,
+    "name": "URL Risk Checker (FYP)",
+    "version": "1.0.0",
+    "description": "Checks URLs using FastAPI + ML model, follows redirects, warns before navigation, stores suspicious list.",
+    "permissions": [
+        "storage", 
+        "tabs", 
+        "activeTab", 
+        "scripting"
+    ],
+    "host_permissions": ["<all_urls>", "http://127.0.0.1:8000/*"],
+    "action": {
+        "default_popup": "popup.html",
+        "default_title": "URL Risk Checker"
+    },
+    "background": {
+        "service_worker": "service_worker.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["content_script.js"],
+            "run_at": "document_start"
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": ["warning.html", "warning.js", "warning.css", "suspicious.html", "suspicious.js", "suspicious.css"],
+            "matches": ["<all_urls>"]
+        }
+  ]
+
+}
